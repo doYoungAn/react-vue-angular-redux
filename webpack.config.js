@@ -46,11 +46,6 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {
-                from: 'static',
-                to: 'static',
-                toType: 'dir'
-            },
-            {
                 from: 'css',
                 to: 'css',
                 toType: 'dir'
