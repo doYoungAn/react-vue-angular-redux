@@ -1,13 +1,11 @@
 {
-  "name": "react-vue-angular",
+  "name": "react-vue-angular-redux",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://doYoungAn.github.io/react-vue-angular",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
-    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -37,10 +35,8 @@
   "dependencies": {
     "@angular/common": "^7.2.3",
     "@angular/core": "^7.2.3",
-    "@angular/http": "^7.2.3",
     "@angular/platform-browser": "^7.2.3",
     "@angular/platform-browser-dynamic": "^7.2.3",
-    "axios": "^0.18.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "rxjs": "^6.4.0",
