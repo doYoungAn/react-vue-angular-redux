@@ -10,7 +10,6 @@ const initialState = {
 }
 
 export function reducers(state = initialState, action) {
-    console.log('들어온 액션', action);
     switch (action.type) {
         case INCREMENT:
             return {
