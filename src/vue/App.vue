@@ -39,17 +39,17 @@ export default {
             return syntaxHighlight(json)
         },
         increment() {
-            this.$store.commit('increment');
+            this.$store.dispatch('increment');
         },
         decrement() {
-            this.$store.commit('decrement');
+            this.$store.dispatch('decrement');
         },
         addUser() {
-            this.$store.commit('addUser', this.$data.user);
+            this.$store.dispatch('addUser', this.$data.user);
             this.$data.user = '';
         },
         deleteUser(index) {
-            this.$store.commit('deleteUser', index);
+            this.$store.dispatch('deleteUser', index);
         }
     }
 }

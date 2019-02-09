@@ -1,15 +1,15 @@
-export function all(state) {
+export const all = (state) => {
     return state;
 }
 
-export function count(state) {
+export const count = (state) => {
     return state.count;
 }
 
-export function owner(state) {
+export const owner = (state) => {
     return state.owner;
 }
 
-export function users(state) {
+export const users = (state) => {
     return state.users;
 }

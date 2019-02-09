@@ -16,6 +16,20 @@ const state = {
 const store = new Vuex.Store({
     state,
     getters,
+    actions: {
+        increment({ commit }) {
+            commit('increment');
+        },
+        decrement({ commit }) {
+            commit('decrement');
+        },
+        addUser(context, user) {
+            context.commit('addUser', user);
+        },
+        deleteUser(context, index) {
+            context.commit('deleteUser', index);
+        }
+    },
     mutations: {
         increment(state) {
             state.count++;
