@@ -11,12 +11,12 @@
             <ul>
                 <li v-for="(user, index) of $store.getters.users" v-bind:key="index">
                     <span>{{ user }}</span>
-                    <button>-</button>
+                    <button @click="deleteUser(i)">-</button>
                 </li>
             </ul>
-            <form class="form" action="">
-                <input class="input" type="text" />
-                <button>등록</button>
+            <form class="form" @submit.prevent="addUser">
+                <input class="input" type="text" v-model="$data.user"/>
+                <button type="submit">등록</button>
             </form>
         </div>
     </div>
@@ -26,10 +26,10 @@
 import { syntaxHighlight } from './../utils';
 
 export default {
-    components: {
-    },
     data() {
-        
+        return {
+            user: ''
+        }
     },
     created() {
         console.log('루트 뷰', this);
@@ -43,6 +43,13 @@ export default {
         },
         decrement() {
             this.$store.commit('decrement');
+        },
+        addUser() {
+            this.$store.commit('addUser', this.$data.user);
+            this.$data.user = '';
+        },
+        deleteUser(index) {
+            this.$store.commit('deleteUser', index);
         }
     }
 }

@@ -2,4 +2,21 @@
     <h1>Angular</h1>
     <!-- {{ all$ | async | json }} -->
     <pre [innerHtml]="syntaxHighlight(all$ | async)"></pre>
+    <div class="content">
+        <div>
+            <span>{{ (all$ | async).count }}</span>
+            <button (click)="increment()">증가</button>
+            <button (click)="decrement()">감소</button>
+        </div>
+        <ul>
+            <li *ngFor="let user of (all$ | async).users; let i = index">
+                <span>{{ user }}</span>
+                <button (click)="deleteUser(i)">-</button>
+            </li>
+        </ul>
+        <form class="form" (ngSubmit)="addUser()">
+            <input class="input" type="text" [(ngModel)]="user" [ngModelOptions]="{standalone: true}"/>
+            <button type="submit">등록</button>
+        </form>
+    </div>
 </div>

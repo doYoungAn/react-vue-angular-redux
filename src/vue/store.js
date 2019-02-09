@@ -18,6 +18,12 @@ const store = new Vuex.Store({
         },
         decrement(state) {
             state.count--;
+        },
+        addUser(state, name) {
+            state.users.push(name);
+        },
+        deleteUser(state, index) {
+            state.users.splice(index, 1);
         }
     },
     getters: {
